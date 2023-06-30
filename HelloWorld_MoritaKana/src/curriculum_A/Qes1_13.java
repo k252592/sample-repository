@@ -32,6 +32,7 @@ public class Qes1_13 {
 //		変数isBooleanを宣言
 		boolean isBoolean;	
 		
+		
 		/*2
 		[概要]ローカル変数をを初期化する処理
 		[詳細]ローカル変数に初期値を代入する
@@ -55,6 +56,7 @@ public class Qes1_13 {
 //		変数isBooleanの初期値を設定
 		isBoolean = false;		
 		
+		
 		/*3
 		[概要]初期化した変数に値を代入する処理
 		[詳細]初期化した変数に値を代入する
@@ -66,7 +68,7 @@ public class Qes1_13 {
 //		変数intNumに1000を代入
 		intNum = 1000;
 //		変数longNumに10000を代入
-		longNum = 10000;
+		longNum = 10000L;
 //		変数floatNumに9.5fを代入
 		floatNum = 9.5f;
 //		変数doubleNumに10.5を代入
@@ -78,6 +80,7 @@ public class Qes1_13 {
 //		変数isBooleanにtrueを代入
 		isBoolean = true;
 		
+		
 		/*4
 		[概要]コンソールに出力する処理
 		[詳細]値を代入した変数を用いて出力する
@@ -85,7 +88,7 @@ public class Qes1_13 {
 //		11110を出力
 		System.out.println(byteNum + shortNum + intNum + longNum);
 //		20を出力
-		System.out.println(byteNum * 2);
+		System.out.println(byteNum + byteNum);
 //		a ハロー trueを出力
 		System.out.println(letter + " " + letters + " "  + isBoolean);
 //		数字を全て足す
@@ -96,6 +99,9 @@ public class Qes1_13 {
 		System.out.println(doubleNum / shortNum);
 //		10引く100をする
 		System.out.println(byteNum - shortNum);
+//		改行する
+		System.out.println();
+		
 		
 		/*5
 		[概要]「ハローJAVA43」と表示させる処理
@@ -108,6 +114,9 @@ public class Qes1_13 {
 		num1 =23;
 //		ハローJAVA43を出力
 		System.out.println("ハローJAVA" + (num + num1));
+//		改行する
+		System.out.println();
+		
 		
 		/*6
 		[概要] formatの通り表示させる処理
@@ -134,6 +143,9 @@ public class Qes1_13 {
 		System.out.println("体重は" + weight + "kgです");
 //		「好きな食べ物は寿司です」を出力
 		System.out.println("好きな食べ物は" + food + "です");
+//		改行する
+		System.out.println();
+		
 		
 		/*7
 		[概要] BMIを出力させる処理
@@ -143,15 +155,20 @@ public class Qes1_13 {
 		float bmi;
 //		変数bmiにBMIを算出する計算式を代入
 		bmi = weight / ((height/100) * (height/100));
+//		変数beforeBmiを宣言し四捨五入する変数bmiを代入
+		BigDecimal beforeBmi = new BigDecimal(bmi);
+// 		setScaleメソッドで小数第2位を四捨五入する
+		BigDecimal afterBmi = beforeBmi.setScale(1, RoundingMode.HALF_UP);
 //		「BMIは〇〇です」を出力
-		System.out.println("BMIは" + bmi + "です");
+		System.out.println("BMIは" + afterBmi + "です");
+//		改行する
+		System.out.println();
 		
 		
 		/*8
 		[概要] 自己紹介を出力させる処理
 		[詳細] 6で宣言した変数に再代入して出力する
 		*/
-		
 //		変数nameに"鈴木一郎"を代入
 		name = "鈴木一郎";
 //		変数ageに24を代入
@@ -164,10 +181,10 @@ public class Qes1_13 {
 		food = "オムライス";
 //		変数bmiに再代入
 		bmi = weight / ((height/100) * (height/100));
-// 		変数beforeBmiを宣言し四捨五入する変数bmiを代入
-		BigDecimal beforeBmi = new BigDecimal(bmi);
+// 		変数beforeBmiに四捨五入する変数bmiを代入
+		 beforeBmi = new BigDecimal(bmi);
 // 		setScaleメソッドで小数第2位を四捨五入する
-		BigDecimal afterBmi = beforeBmi.setScale(1, RoundingMode.HALF_UP);
+		afterBmi = beforeBmi.setScale(1, RoundingMode.HALF_UP);
 		
 		
 //		「初めまして鈴木一郎です」を出力
@@ -182,6 +199,9 @@ public class Qes1_13 {
 		System.out.println("好きな食べ物は" + food + "です");
 //		「BMIは22.6です」を出力
 		System.out.println("BMIは" + afterBmi + "です");
+//		改行する
+		System.out.println();
+		
 		
 		/*9
 		[概要] 自己紹介を出力させる処理
@@ -217,6 +237,9 @@ public class Qes1_13 {
 		System.out.println("好きな食べ物は" + food + "です");
 //		「BMIは11.31です」を出力
 		System.out.println("BMIは" + afterBmi + "です");
+//		改行する
+		System.out.println();
+		
 		
 		/*10
 		[概要]条件を満たせばtrueを出力する処理
@@ -226,6 +249,9 @@ public class Qes1_13 {
 		age = 24;
 //		ageが25歳以上ならtrueを出力
 		System.out.println(25 <= age); 
+//		改行する
+		System.out.println();
+		
 		
 		/*11
 		[概要]【年齢・身長・体重】を文字列型で出力する処理
@@ -246,6 +272,9 @@ public class Qes1_13 {
 		String weightStr = String.valueOf(weight);
 //      文字列型に変換した【年齢・身長・体重】を繋げて出力
 		System.out.println(ageStr + heightStr + weightStr);
+//		改行する
+		System.out.println();
+		
 		
 		/*12
 		[概要]【年齢・身長】を整型で出力する処理
@@ -261,6 +290,9 @@ public class Qes1_13 {
 		int heightInt = (int)heightFloat;
 //		整数型に変換した身長を出力
 		System.out.println(heightInt);
+//		改行する
+		System.out.println();
+		
 		
 		/*13
 		[概要]条件を満たせばtrueを出力する処理
