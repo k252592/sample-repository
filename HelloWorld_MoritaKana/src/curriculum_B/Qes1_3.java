@@ -23,6 +23,8 @@ public class Qes1_3 {
 		if (name.isEmpty() || name.length() <= 0) {
 			// ユーザー名の文字数が0文字以下もしくはnull場合の出力
 			System.out.println("名前を入力してください");
+			// 処理を終了させる
+			System.exit(0);
 
 		} else if (!name.matches("^[A-Za-z0-9]+$")) {
 			// ユーザー名が半角英数字以外の場合の出力
