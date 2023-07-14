@@ -1,4 +1,5 @@
 package curriculum_New_question;
+import java.util.Arrays;
 import java.util.Random;
 
 public class Curriculum_New_1_18 {
@@ -20,13 +21,8 @@ public class Curriculum_New_1_18 {
 	// Q3：引数として整数の配列を渡すと、受け取った値を順番にコンソールに出力するメソッドを作成してください
 	// メソッドを作成し引数に配列を入れる
 	static void array(int[] arr) {
-		// 変数arrrNumに配列arrの中身を代入
-		for (int arrNum : arr) {
-			// 出力内容を入れる
-			System.out.print(arrNum + " ");
-		}
-		// 改行する
-		System.out.println();
+		// 出力内容を入れる
+		System.out.println(Arrays.toString(arr));
 	}
 
 	// Q4：Q2をオーバーロードして引数を小数2つに変更し、引数同士を和算しコンソールに出力してください。
@@ -49,22 +45,13 @@ public class Curriculum_New_1_18 {
 			// ランダムな数字を作成
 			Random random = new Random();
 			randomNum = random.nextInt(100) + 1;
-
-			if (randomNum == 0) {
-				// 数字が0の場合
-				// 処理を抜ける
-				break;
-			} else {
-				// それ以外の場合
-				// 数字を配列に格納する
-				nums[i] = randomNum;
-				// 出力内容を入れる
-				System.out.print(randomNum + " ");
-			}
+			// 数字を配列に格納する
+			nums[i] = randomNum;
 		}
-		// 改行する
-		System.out.println();
-
+		
+		// 出力内容を入れる
+		System.out.println(Arrays.toString(nums));
+		
 		// 格納した値を返す
 		return nums;
 
@@ -121,14 +108,14 @@ public class Curriculum_New_1_18 {
 		// Q4 メソッドの呼び出し
 		multiplication(2.5, 4.2);
 
-		// Q5 メソッドの呼び出し
-		random(5);
+		// Q5 メソッドを呼び出して変数に代入
+		int[] random = random(5);
 
-		// Q6 メソッドの呼び出し
-		average(random(5));
+		// Q6 メソッドを呼び出して変数に代入
+		double average = average(random);
 
 		// Q7 メソッドの呼び出し
-		judge(average(random(5)));
+		judge(average);
 	}
 
 }
