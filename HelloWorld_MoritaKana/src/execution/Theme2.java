@@ -29,7 +29,7 @@ public class Theme2 {
 
 		// 定型文の出力
 		theme.output();
-
+		
 		// 現在日時の出力
 		theme.date();
 

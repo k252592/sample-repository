@@ -50,7 +50,7 @@ public class Theme2_process {
 		// 表示形式を変換
 		String date = dateFormat.format(importDate);
 		// 出力する
-		System.out.println(date);
+		System.out.println("今の現在日時は" + date + "です");
 	}
 
 }
