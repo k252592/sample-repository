@@ -3,6 +3,11 @@ package sub_question_1_25;
 import java.util.Random;
 
 public class Status extends Sub {
+	
+	public Status(){
+		// スーパークラスの呼び出し
+		super();
+	}
 
 	// ステータスを表示するメソッド
 	public void display() {
