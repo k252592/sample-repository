@@ -5,7 +5,7 @@ public class Sub {
 	public Sub(String element) {
 
 		// nullチェック
-		if (element.isEmpty()) {
+		if (element.isEmpty() || element == null) {
 
 			// 処理を終了する
 			System.exit(0);
@@ -17,6 +17,7 @@ public class Sub {
 
 		// 入力値を配列にする
 		String[] input = element.split(",");
+		
 		// ラベルの配列
 		String[] label = { "動物名", "体長", "速度", "学名" };
 
