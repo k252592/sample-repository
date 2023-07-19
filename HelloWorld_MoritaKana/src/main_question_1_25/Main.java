@@ -3,7 +3,6 @@ package main_question_1_25;
 import java.util.Scanner;
 
 import sub_question_1_25.Status;
-import sub_question_1_25.Sub;
 
 /*
 
@@ -38,17 +37,16 @@ public class Main {
 		// 実行後に閉じる
 		scanner.close();
 
-		// subの呼び出し
-		Sub sub = new Sub(name);
-
+		// サブクラスの呼び出し
+		Status status = new Status();
+		
 		// 名前を格納
-		sub.setName(name);
+		status.setName(name);
 
 		// 名前を出力
-		System.out.println("こんにちは 「" + sub.getName() + "」さん");
+		System.out.println("こんにちは 「" + status.getName() + "」さん");
 
-		// statusのdisplayメソッドの呼び出し
-		Status status = new Status();
+		// displayメソッドの呼び出し
 		status.display();
 
 		// メッセージ出力
